@@ -1,0 +1,38 @@
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / 300px 1fr auto;
+}
+
+header {
+    background: teal;
+    padding: 2rem;
+    grid-column: 1 / 4;
+}
+
+.left-side {
+    background: blueviolet;
+    grid-column: 1 / 2;
+}
+
+main {
+    background: goldenrod;
+    grid-column: 2 / 3;
+}
+
+.right-side {
+    background: purple;
+    grid-column: 3 / 4;
+}
+
+footer {
+    background: green;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+.left-side, 
+.right-side {
+    padding: 1rem;
+}
