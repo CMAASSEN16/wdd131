@@ -5,10 +5,15 @@ body {
 }
 
 header {
-    display: flex;
     background: teal;
     padding: 2rem;
     grid-column: 1 / 4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left-side {
