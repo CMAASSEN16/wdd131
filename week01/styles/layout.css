@@ -5,6 +5,7 @@ body {
 }
 
 header {
+    display: flex;
     background: teal;
     padding: 2rem;
     grid-column: 1 / 4;
