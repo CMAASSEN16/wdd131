@@ -84,8 +84,6 @@ main {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 4px;
-    margin: 0 --20px;
-    text-align: center;
 }
 
 .card .about-me{
@@ -103,7 +101,7 @@ main {
 }
 
 .card .about_me img {
-    max-width: 200;
+    max-width: 200px;
 }
 .card h3 {
     margin: 20px auto;
