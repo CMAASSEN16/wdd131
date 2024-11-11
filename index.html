@@ -6,11 +6,13 @@
     <title>WDD 131 - Dynamic Web Fundamentals - Collin J. Maassen</title>
     <meta name="description" content="This is my WDD 131- Dynamic Web Fundamentals homepage. Written by Collin maassen, Describing information about himself and links to activities for the course."
     <meta name="author" content="Collin Maassen">
-    <!-- <link rel="stylesheet" href="styles/layout.css"> -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js"></script>
 </head>
 <body>
     <header>
-    <h1>WDD 131: Dynamic Web Fundamentals - <a href="index.html">Collin J. Maassen</a></h1>
+    <h1>WDD 131: Dynamic Web Fundamentals -<a href="index.html">- Collin J. Maassen</a></h1>
     <nav>
         <a href="#" target="_blank">LinkedIn</a>
         <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
@@ -20,29 +22,38 @@
     </header>
 
     <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error autem rem voluptatem in, explicabo quibusdam, maxime blanditiis nulla repellat qui consequatur enim dolor! Veniam accusamus corporis at quo suscipit vitae!</p>
+        <div class="card-container">
+            <section class="card">
+                    <h2>About Me</h2>
+                    <div class="about-me">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error autem rem voluptatem in, explicabo quibusdam, maxime blanditiis nulla repellat qui consequatur enim dolor! Veniam accusamus corporis at quo suscipit vitae!</p>
 
-            <img src="" alt="Collin Maassen portrait sitting on a motorcycle wearing a leather jacket and sunglasses.">
-
-            <h3>Arizona, United States of America</h3>
-            <img src="" alt="United States of America National Flag">
-            <p>Official flag of the USA</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi, sapiente ratione possimus laudantium, deleniti similique, necessitatibus veritatis tempore omnis incidunt! Magni minus officia voluptatibus reprehenderit culpa veritatis natus harum.</p>
-        </section>
-        <section class="card">
-            <h2>Web Dev Resources</h2>
-            <nav>
-                <ul>
-                    <a href="#">I</a>
-                    <a href="#">Don't</a>
-                    <a href="#">Know</a>
-                    <a href="#">Yet</a>
-                </ul>
-            </nav>
-        </section>
+                        <img src="images/profile.png" alt="Collin Maassen portrait wearing a leather jacket and a camo backpack.">
+                    </div>
+                    
+                    <h3>Arizona, United States of America</h3>
+                    <div class="flag">
+                        <div class="flag-img">
+                            <img src="images/flag.png" alt="United States of America National Flag">
+                            <p>Official flag of the USA</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi, sapiente ratione possimus laudantium, deleniti similique, necessitatibus veritatis tempore omnis incidunt! Magni minus officia voluptatibus reprehenderit culpa veritatis natus harum.</p>
+                    </div>
+            </section>
+            <section class="card">
+                <div class="web-dev">
+                    <h2>Web Dev Resources</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">I</a></li>
+                            <li><a href="#">Don't</a></li>
+                            <li><a href="#">Know</a></li>
+                            <li><a href="#">Yet</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>© <span id="currentyear"></span> ♌ Collin Maassen ☯ USA, Arizona</p>

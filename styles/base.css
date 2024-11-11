@@ -1,0 +1,190 @@
+:root {
+    --primary_color: #3AAED8;
+    --secondary_color: #95BF8F;
+    --accent1_color: #DCD6F7;
+    --accent_color2: #5603AD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary_color);
+    font-family: "Crete Round", serif;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary_color);
+    text-align: center;
+    font-family: "Passion One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 2.5rem;  
+}
+
+header h1 a:hover {
+    color: var(--secondary_color);
+}
+
+header nav {
+    display: flex;
+    background-color: var(--accent_color2);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--secondary_color);
+    text-decoration: none;
+    font-size: 35px;
+}
+
+header nav a:hover {
+    color: var(--accent1_color);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+.card-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card h2 {
+    background-color: var(--primary_color);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    margin: 0 --20px;
+    text-align: center;
+}
+
+.card .about-me{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.card .about-me p {
+    text-align: left;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.card .about_me img {
+    max-width: 200;
+}
+.card h3 {
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.card .flag {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+.card .flag .flag-img {
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.card .flag-img {
+    flex: 1;
+    text-align: center;
+}
+
+.card .web-dev{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card .web-dev h2 {
+    background-color: var(--primary_color);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card .web-dev nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card .web-dev nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card .web-dev nav ul li  {
+    margin: 5px 0;
+}
+
+.card .web-dev nav ul a:hover  {
+    color:var(--secondary_color);
+}
+
+footer {
+    background-color: var(--primary_color);
+    padding: 20px;
+    margin-top: 40px;
+}
+footer p {
+    margin: 10px 0;
+}
+
+footer #currentyear {
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
