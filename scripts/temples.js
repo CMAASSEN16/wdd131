@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.createElement('button');
 
     hamburger.textContent = '☰';
+    hamburger.setAttribute('arial-label', 'Toggle Menu');
     hamburger.style.cssText = `
     display: none;
     background: none;
@@ -10,23 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
     font-size: 2rem;
     cursor: pointer;
     color: white;
+    z-index: 1001;
     `;
 
     nav.before(hamburger);
 
     hamburger.addEventListener('click', () => {
-        const isVisible = nav.style.display === 'flex';
-        nav.style.display = isVisible ? 'none' : 'flex';
-        hamburger.textContent = isVisible ? '☰' : '❌'
+        const isOpen = nav.classList.toggle('open');
+        hamburger.textContent = isOpen ? '❌' : '☰'; 
     });
     
     window.addEventListener('resize', () => {
         if (window.innerWidth < 768) {
             hamburger.style.display = 'block';
-            nav.style.display = 'none';
+            nav.classList.remove('open');
         } else {
             hamburger.style.display = 'none';
-            nav.style.display = 'flex';
+            nav.classList.add('open');
         }
     });
 

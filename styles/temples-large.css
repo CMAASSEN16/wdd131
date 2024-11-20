@@ -1,41 +1,49 @@
-@media only screen and (min-width:500px) {
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+@media only screen and (min-width:768px) {
+    
+    header{
+        font-size: 2rem;
     }
-
-    header
-    {
+    
+    header nav {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
+        flex-direction: row;
+        position: static;
+        gap: 20px;
+        box-shadow: none;
     }
 
     header h1 {
         font-size: 2rem;
+        white-space: nowrap;
     }
 
     header nav {
         justify-content: flex-end;
-        gap: 100px;
+        flex-direction: row;
+        position: static;
+        gap: 20px;
+        white-space: normal;
     }
 
     main {
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 20px;
-        justify-items: center;
-        align-items: start;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 
     main h2 {
         grid-column: span 3;
-        text-align: center;
-        margin-bottom: 20px;
         margin-top: 20px;
+    }
+
+    main p {
+        padding-bottom: 10px;
+    }
+
+    main img {
+        max-width: 100%;
+        height: auto;
     }
 }
