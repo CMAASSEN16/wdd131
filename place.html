@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Collin Maassen - Week 03 Arizona</title>
+    <meta name="description" content="This is my week 3 page project for WDD 131. This will demonstrate responsive images and and page features that have been learned up to this point.">
+    <meta name="author" content="Collin Maassen">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Neuton:ital@0;1&family=Spectral&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Arizona</h1>
+    </header>
+    <main>
+        <picture class="az-animal">
+            <source media="min-width: 1000px" srcset="images/ringtail-medium.webp">
+            <source media="min-width: 1500px" srcset="images/ringtail-large.webp">
+            <img src="images/ringtail-mobile.webp" alt="Ringtails, Arizona's state mammal.">
+        </picture>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Arizona Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Area: </td>
+                    <td class="info">113,998 sq miles</td>
+                </tr>
+                <tr>
+                    <td>Population: </td>
+                    <td class="info">7.431 million</td>
+                </tr>                <tr>
+                    <td>Capitol: </td>
+                    <td class="info">Phoenix</td>
+                </tr>                <tr>
+                    <td>Languages: </td>
+                    <td class="info">English, Spanish</td>
+                </tr>                <tr>
+                    <td>Currency: </td>
+                    <td class="info">US Dollar</td>
+                </tr>                <tr>
+                    <td>Time Zone: </td>
+                    <td class="info">Arizona, Currently UTC-7:00</td>
+                </tr>                
+                <tr>
+                    <td>Calling Code: </td>
+                    <td class="info">+1</td>
+                </tr>                <tr>
+                    <td>Internet TLD: </td>
+                    <td class="info">.us</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Weather <br> <img src="images/cloudy.svg" alt="Cloudy Weather Icon"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Temperature: </td>
+                    <td class="info">78 ℉</td>
+                </tr>
+                <tr>
+                    <td>Conditions: </td>
+                    <td class="info">Overcast, Cloudy</td>
+                </tr>
+                <tr>
+                    <td>Wind: </td>
+                    <td class="info">4 mph</td>
+                </tr>
+                <tr>
+                    <td>Wind Chill: </td>
+                    <td class="info">76 ℉</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> ♌ Collin Maassen ☯ USA, Arizona</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .neuton-regular {
+    font-family: "Neuton", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.neuton-regular-italic {
+    font-family: "Neuton", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+.spectral-regular {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+   */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Neuton", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background-color: #373F51;
+}
+   
+/* h1, th {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+header {
+    text-align: center;
+    background-color: aquamarine;
+    width: 100%;
+    padding: 10px;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.az-animal img{
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+table{
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    background-color: #FFAFC5;
+    box-shadow: 0px 4px 6px rgba( 0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+th {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+    text-align: right;
+}
+
+.info {
+    text-align: left;
+}
+
+footer{
+    background-color: aquamarine;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+@media (min-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 20px;
+        align-items: start;
+        background-image: url('../images/ringtail-medium.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .az-animal img {
+        display: none;
+    }
+
+    table {
+        width: auto;
+    }
+
+    th {
+        text-align: left;
+        background-color: #373F51;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    table:first-of-type {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        margin-left: 10px;
+        align-self: start;
+    }
+
+    table:last-of-type {
+        grid-column: 3 / 3;
+        grid-row: 2 / 3;
+        margin-right: 10px;
+        align-self: end;
+        justify-self: end;
+    }
+}
+
+@media (min-width: 1500px) {
+    main {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        background-image: url('../images/ringtail-large.webp');
+    }
+
+    table:first-of-type {
+        grid-column: 1 / 2;
+    }
+
+    table:last-of-type {
+        grid-column: 3 / 4;
+    }
+}
