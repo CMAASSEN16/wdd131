@@ -1,0 +1,41 @@
+@media only screen and (min-width:768px) {
+    
+    header{
+        font-size: 2rem;
+    }
+    
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header nav {
+        flex-direction: row;
+        position: static;
+        gap: 20px;
+        box-shadow: none;
+        justify-content: flex-end;
+        white-space: normal;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    main h2 {
+        grid-column: span 3;
+        margin-top: 20px;
+    }
+
+    main p {
+        padding-bottom: 10px;
+    }
+
+    main img {
+        max-width: 100%;
+        height: auto;
+    }
+}
