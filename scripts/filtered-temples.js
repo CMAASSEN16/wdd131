@@ -118,12 +118,12 @@ const temples = [
 ];
 
 function displayTemples(filteredTemples) {
-    const main = document.querySelector("main");
+    const main = document.querySelector('main');
     main.innerHTML = "<h2>Home</h2>";
     
-    filteredTemples.foreach((temple) => {
-        const article = document.createElement("article");
-        article.classList.add("temple-card");
+    filteredTemples.forEach((temple) => {
+        const article = document.createElement('article');
+        article.classList.add('temple-card');
     
         article.innerHTML = `
             <figure>
@@ -161,24 +161,24 @@ function filterSmall() {
   return temples.filter((temple) => temple.area < 10000);
 }
 
-document.querySelector("nav").addEventListener("click", (event) => {
+document.querySelector('#nav-menu').addEventListener('click', (event) => {
   event.preventDefault();
   const filter = event.target.textContent.toLowerCase();
 
   switch (filter) {
-    case "old":
+    case 'old':
       displayTemples(filterOld());
       break;
-    case "new":
+    case 'new':
       displayTemples(filterNew());
       break;
-    case "large":
+    case 'large':
       displayTemples(filterLarge());
       break;
-    case "small":
+    case 'small':
       displayTemples(filterSmall());
       break;
-    case "home":
+    case 'home':
     default:
       displayTemples(temples);
   }
