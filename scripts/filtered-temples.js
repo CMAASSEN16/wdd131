@@ -115,11 +115,27 @@ const temples = [
         imageUrl: 
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/toronto-ontario/400x250/toronto-temple-lds-235671-wallpaper.jpg"
     },
+    {
+      templeName: "San Diego California Temple",
+      location: "San Diego, California, United States",
+      dedicated: "1993, April, 27",
+      area: 72000,
+      imageUrl: 
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-temple-765109-wallpaper.jpg"
+    },
+    {
+      templeName: "London England Temple",
+      location: "Surrey, Englad",
+      dedicated: "1958, September, 8",
+      area: 42652,
+      imageUrl: 
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/london-england/400x250/london-england-temple-lds-650241-wallpaper.jpg"
+    },
 ];
 
 function displayTemples(filteredTemples) {
     const main = document.querySelector('main');
-    main.innerHTML = "<h2>Home</h2>";
+    main.innerHTML = `<h2>${headingText}</h2>`;
     
     filteredTemples.forEach((temple) => {
         const article = document.createElement('article');
@@ -167,20 +183,20 @@ document.querySelector('#nav-menu').addEventListener('click', (event) => {
 
   switch (filter) {
     case 'old':
-      displayTemples(filterOld());
+      displayTemples(filterOld(), "Temples Dedicated Before 1900");
       break;
     case 'new':
-      displayTemples(filterNew());
+      displayTemples(filterNew(), "Temples Dedicated After 2000");
       break;
     case 'large':
-      displayTemples(filterLarge());
+      displayTemples(filterLarge(), "Large Temples");
       break;
     case 'small':
-      displayTemples(filterSmall());
+      displayTemples(filterSmall(), "Small Temples");
       break;
     case 'home':
     default:
-      displayTemples(temples);
+      displayTemples(temples, "Home");
   }
 });
 
