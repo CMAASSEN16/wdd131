@@ -133,7 +133,7 @@ const temples = [
     },
 ];
 
-function displayTemples(filteredTemples) {
+function displayTemples(filteredTemples, headingText = "Home") {
     const main = document.querySelector('main');
     main.innerHTML = `<h2>${headingText}</h2>`;
     
