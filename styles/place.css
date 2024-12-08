@@ -167,8 +167,7 @@ footer{
     main {
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: auto 1fr auto;
-        background-image: url('../images/ringtail-large.webp');
-    }
+       }
 
     table:first-of-type {
         grid-column: 1 / 2;
