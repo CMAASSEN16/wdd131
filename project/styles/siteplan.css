@@ -1,0 +1,172 @@
+
+
+/* .volkhov-regular {
+  font-family: "Volkhov", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.volkhov-regular-italic {
+  font-family: "Volkhov", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-regular-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-medium-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+*/
+
+:root {
+    --primary-color: #05668dff;
+    --secondary-color: #00a896ff;
+    --accent1-color: #eb9486ff;
+    --accent2-color: #f0f3bdff;
+    --accent3-color: #028090ff;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, var(--accent3-color), var(--secondary-color));
+    color: white;
+    border-bottom: 3px solid var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: "Volkhov", serif;
+    font-size: 1.8rem;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--accent2-color);
+}
+
+main h2 {
+    font-family: "Volkhov", serif;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main h3 {
+    font-family: "Volkhov", serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+main p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent3-color));
+    color: white;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--primary-color);
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    header nav.open {
+        display: flex;
+    }
+
+    header button {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header button {
+        display: none;
+    }
+}
