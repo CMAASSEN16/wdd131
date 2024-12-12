@@ -89,6 +89,8 @@ fieldset {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
     background-color: var(--primary-color);
     width: 100%;
     padding: .8rem;
