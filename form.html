@@ -8,8 +8,72 @@
     <meta name="author" content="Collin Maassen">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <label for="product">Product Name</label>
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="stars">
+                    <label>
+                        <input type="radio" name="rating" value="1" required> ⭐
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="2" required> ⭐⭐
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="3" required> ⭐⭐⭐
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="4" required> ⭐⭐⭐⭐
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="5" required> ⭐⭐⭐⭐⭐
+                    </label>
+                </div>
+            </fieldset>
+            <label for="installation-date">Date of Install</label>
+            <input type="date" name="installation-date" id="installation-date" required>
+
+            <fieldset>
+                <legend>Which features did you find useful? <br>(Check all that apply)</legend>
+                <label>
+                    <input type="checkbox" name="features" id="feature1"> Durability
+                </label>
+                <label>
+                    <input type="checkbox" name="features" id="feature2"> Design
+                </label>
+                <label>
+                    <input type="checkbox" name="features" id="feature3"> Easy to Use
+                </label>
+                <label>
+                    <input type="checkbox" name="features" id="feature1"> Item as Described
+                </label>
+            </fieldset>
+            <label for="review" class="gray-sec">Review (Optional)</label>
+            <textarea name="review" id="review" rows="6" placeholder="Write your review in this window..."></textarea>
+
+            <label for="username">Your Name (Optional)</label>
+            <input type="text" name="username" id="username" placeholder="Name...">
+
+            <input type="submit" value="Post Your Review">
+        </form>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> ♌ Collin Maassen ☯ USA, Arizona</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
