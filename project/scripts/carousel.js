@@ -13,16 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.src = src;
         img.alt = alt;
-        img.style.display = 'none';
         img.style.height = '50vh';
         img.style.width = 'auto';
         img.style.margin = '0 auto';
-        img.style.display = 'block';
+        img.style.display = 'none';
         carousel.appendChild(img);
         return img;
     });
 
-    images[0].style.display = 'block';
+    function showImage(index) {
+        images.forEach(img => {
+            img.style.display = 'none';
+        });
+        images[index].style.display = 'block';
+    }
+
+    images[0].addEventListener('load', () => {
+        showImage(0);
+    });
 
     const prevBtn = document.createElement('button');
     prevBtn.innerHTML = '&#10094;';
@@ -34,11 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     carousel.appendChild(prevBtn);
     carousel.appendChild(nextBtn);
-
-    function showImage(index) {
-        images.forEach(img => img.style.display = 'none');
-        images[index].style.display = 'block';
-    }
 
     function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
