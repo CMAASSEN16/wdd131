@@ -1,6 +1,3 @@
-/* -------------------- */
-/* Custom Properties    */
-/* -------------------- */
 :root {
     --primary-color: #05668dff;
     --secondary-color: #00a896ff;
@@ -10,18 +7,12 @@
     --text-color: #333333;
 }
 
-/* -------------------- */
-/* Reset               */
-/* -------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* -------------------- */
-/* Base Styles         */
-/* -------------------- */
 body {
     font-family: "Barlow", sans-serif;
     color: var(--text-color);
@@ -31,15 +22,61 @@ body {
     min-height: 100vh;
 }
 
+body.the-diver {
+    background-image: linear-gradient(
+        to top,
+        var(--accent2-color),
+        var(--accent3-color)
+    );
+}
+
 img {
     border-radius: 25px;
     max-width: 100%;
     height: auto;
 }
 
-/* -------------------- */
-/* Header & Navigation */
-/* -------------------- */
+main h2, main h3, main h4 {
+    font-family: "Volkhov", serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--accent2-color);
+}
+
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.item1, .item2, .item3, .item4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+aside img,
+aside iframe {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -104,44 +141,6 @@ nav a.active {
     background-color: var(--accent2-color);
 }
 
-/* -------------------- */
-/* Main Content        */
-/* -------------------- */
-main {
-    flex: 1;
-    padding: 2rem;
-    background-color: var(--accent2-color);
-}
-
-main h2 {
-    font-family: "Volkhov", serif;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-main h3, main h4 {
-    font-family: "Volkhov", serif;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-main p {
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-body.the-diver {
-    background-image: linear-gradient(
-        to top,
-        var(--accent2-color),
-        var(--accent3-color)
-    );
-}
-
-/* -------------------- */
-/* Footer              */
-/* -------------------- */
 footer {
     text-align: center;
     justify-content: space-between;
@@ -159,7 +158,6 @@ footer p {
     margin: 0.5rem 0;
 }
 
-/* Social Icons */
 .social-links {
     display: flex;
     justify-content: center;
@@ -184,9 +182,6 @@ footer p {
     width: 30px;
 }
 
-/* -------------------- */
-/* Carousel Component  */
-/* -------------------- */
 .carousel {
     position: relative;
     max-width: 800px;
@@ -226,9 +221,6 @@ footer p {
     right: 0;
 }
 
-/* -------------------- */
-/* Media Queries       */
-/* -------------------- */
 @media only screen and (max-width: 768px) {
     header nav {
         flex-direction: column;
@@ -237,6 +229,10 @@ footer p {
 
     .desk-view {
         width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
     }
 }
 
@@ -252,5 +248,18 @@ footer p {
         height: auto;
         max-height: 80vh;
         object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .item1, .item2, .item3, .item4 {
+        flex: 1;
+        min-width: 0;
     }
 }
