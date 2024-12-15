@@ -112,7 +112,7 @@ header nav {
 
 
 nav a {
-    color: rgb(17, 17, 85);
+    color: blue;
     text-shadow: 1px 1px black;
     text-decoration: none;
     margin: 0 10px;
@@ -123,7 +123,7 @@ nav a {
 
 nav a:link,
 nav a:visited {
-    color: rgb(17, 17, 85);
+    color: blue;
     text-shadow: 1px 1px black;
 }
 
@@ -300,7 +300,6 @@ footer p {
     border-radius: 15px;
 }
 
-/* Form Styles */
 form {
     background-color: var(--accent2-color);
     padding: 2rem;
