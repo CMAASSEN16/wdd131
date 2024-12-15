@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       title: "Community Impact",
-      text: `This is the man beneath the mask, Dallas. I like to introduce him as my
+      text: `This is the man beneath the mask, Dallas (on the right). I like to introduce him as my
         friend but honestly he is so much more than that. Dallas has been my
         friend, my confidant, and honestly a pillar of his community. He is a
         skilled developer that likes to spend time with his family and friends.
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         into his life to live it to the fullest. That is why he reccomends if
         you're interested in obtaining your own scuba certifications to visit
         the <a href="certificates.html">Scuba Classes</a> site.`,
-      imgSrc: "images/collin_dallas.jpg",
+      imgSrc: "images/collin_dallas.webp",
       imgAlt: "Dallas working with community members",
     },
   ];

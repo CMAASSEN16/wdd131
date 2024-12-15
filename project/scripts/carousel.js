@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     const imageData = [
-        { src: 'images/scheels_kids.jpg', alt: 'Diving scene 1' },
-        { src: 'images/shark_tank.jpg', alt: 'Diving scene 2' },
-        { src: 'images/old-diver.webp', alt: 'Diving scene 3' },
-        { src: 'images/tank-small.webp', alt: 'Diving scene 4' }
+        { src: 'images/scheels-diver.webp', alt: 'Diving scene 1' },
+        { src: 'images/shark_tank.webp', alt: 'Diving scene 2' },
+        { src: 'images/havasu.webp', alt: 'Diving scene 3' },
+        { src: 'images/tank-small.webp', alt: 'Diving scene 4' },
+        { src: 'images/submerged.webp', alt: 'Diving scene 5' },
     ];
 
     const images = imageData.map(({ src, alt }) => {

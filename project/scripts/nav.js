@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Page title mapping
     const pageHeaders = {
         'the-diver.html': {
             title: 'The Man In The Tank',
@@ -23,21 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Get current page filename
     const currentPage = window.location.pathname.split('/').pop() || 'the-diver.html';
     const pageInfo = pageHeaders[currentPage] || pageHeaders['the-diver.html'];
 
-    // Create header HTML
     let headerHTML = '';
     
-    // Add image if it exists for this page
     if (pageInfo.imgSrc) {
         headerHTML += `
             <img src="${pageInfo.imgSrc}" alt="${pageInfo.imgAlt}">
         `;
     }
 
-    // Add title and navigation
     headerHTML += `
         <h1>${pageInfo.title}</h1>
         <nav>
@@ -47,6 +42,41 @@ document.addEventListener('DOMContentLoaded', function() {
         </nav>
     `;
 
-    // Replace the entire header content
     document.querySelector('header').innerHTML = headerHTML;
 }); 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('header nav');
+    const hamburger = document.createElement('button');
+
+    hamburger.textContent = '☰';
+    hamburger.setAttribute('arial-label', 'Toggle Menu');
+    hamburger.style.cssText = `
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+    `;
+
+    nav.before(hamburger);
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        hamburger.textContent = isOpen ? '❌' : '☰'; 
+    });
+    
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768) {
+            hamburger.style.display = 'block';
+            nav.classList.remove('open');
+        } else {
+            hamburger.style.display = 'none';
+            nav.classList.add('open');
+        }
+    });
+
+    window.dispatchEvent(new Event('resize'));
+});
