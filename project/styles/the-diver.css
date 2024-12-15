@@ -113,7 +113,7 @@ header nav {
 
 nav a {
     color: blue;
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px black;
     text-decoration: none;
     margin: 0 10px;
     padding: 1rem;
@@ -124,7 +124,7 @@ nav a {
 nav a:link,
 nav a:visited {
     color: blue;
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px black;
 }
 
 nav a:hover {
